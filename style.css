@@ -365,7 +365,8 @@ img {
 
 .container {
   display: grid;
-  grid-template-columns: 350px repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   height: 100vh;
   width: 100vw;
 }
@@ -374,42 +375,40 @@ img {
   border: 1px solid gray;
 }
 
+/*CSS code for the sidebar*/
+
 .sidebar-container {
   height: 100vh;
   width: 100%;
   display: grid;
   grid-template-rows: 100px 350px 200px;
-  row-gap: 35px;
-  grid-row: 1/2;
+
+  grid-row: 1/-1;
   grid-column: 1/2;
   background-color: #c4b5fd;
 
- 
   align-items: center;
 }
 
 .sb-section {
-  
+  /* border: 1px solid gray; */
+
   padding-left: 30px;
-
-  
-
   display: grid;
   grid-template-columns: 100px;
   grid-auto-rows: min-content;
-  row-gap: 5px;
 }
 
 .sb-section-2 {
-  width:100% ;
+  /* border: 1px solid orange; */
+
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  column-gap: 10px;
+  column-gap: 5px;
   align-items: center;
 
   grid-auto-flow: column;
-
-  
 }
 
 .sb-img-large {
@@ -427,6 +426,73 @@ p.sb-text-small {
   font-weight: 600;
 }
 
-.sb-text-large{
-  font-size: 2.1rem;
+.sb-text-large {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+/*CSS code for the sidebar*/
+
+/*CSS code for the header section*/
+
+.header-section > * {
+  border: 2px solid orangered;
+}
+
+.header-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  grid-column: 2/-1;
+  grid-row: 1/1;
+}
+
+/*CSS for projects Section*/
+
+.project-section {
+  border: 4px solid rgb(90, 81, 68);
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+
+  display: grid;
+}
+
+.search-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+
+}
+
+.search-section > img { 
+  width: fit-content;
+  height: 60px;
+}
+
+input.search-bar{
+  width: 100%;
+  grid-column: 1/4;
+}
+
+.user-section {
+  margin-top: 20px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 70px 1fr;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.large-user-img {
+  width: fit-content;
+  height: 65px;
+}
+
+.user-section > * {
+  /* border: 1px solid greenyellow; */
+}
+
+.name-section {
+  line-height: 0.4rem;
 }
